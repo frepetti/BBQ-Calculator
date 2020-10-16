@@ -1,51 +1,153 @@
-#calculator{
-    width: 500px;
-    .display{
-        box-sizing: border-box;
-        margin: 5px;
-        input{
-            width: 100%;
+#theme{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    header{
+        nav{
             height: 50px;
-        }
-    }
-    .topBtns{
-        .advOperators{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            div{
-                text-align: center;
-                margin: 5px;
-                height: 50px;
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            .divisorTab{
                 line-height: 50px;
-                border: 1px solid black;
+            }
+            .calcTab{
+                line-height: 50px;
+            }
+            #themeBtn{
+                line-height: 50px;
             }
         }
     }
-    .bottomBtns{
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        .numpad{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            div{
-                text-align: center;
-                margin: 5px;
-                height: 50px;
-                line-height: 50px;
-                border: 1px solid black;
+    #divisor{
+        border: black 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .guestData{
+            display: flex;
+            justify-content: space-around;
+            .guestList{
+                .guestContainer{
+                    margin: 0.5vw;
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+                    input[type=number] {
+                        -moz-appearance: textfield;
+                    }
+                    input{
+                        text-indent: 0.5vw;
+                    }
+                }
+                .more{
+                    svg{
+                        margin: 0.5vw;
+                        border: 1px black solid;
+                        padding: 5px;
+                        border-radius: 95%;
+                    }
+                }
+            }
+            #calculate{
+                height: 5vh;
+                align-self: center;
             }
         }
-        .regOperators{
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            div{
-                text-align: center;
-                margin: 5px;
+        .result{
+            margin: 1vw;
+            border: 1px black solid;
+            height: 30vh;
+            span{
+                display: block;
+            }
+        }
+    }
+    #calculator{
+        box-sizing: border-box;
+        border: black 1px solid;
+        .display{
+            box-sizing: border-box;
+            margin: 1vw;
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+            input{
+                box-sizing: border-box;
+                width: 100%;
                 height: 50px;
-                line-height: 50px;
-                border: 1px solid black;
+                text-indent: 1vw;
+            }
+        }
+        
+        .topBtns{
+            margin: 0.5vw;
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            .addBtn{
+                box-sizing: border-box;
+                margin: 0.5vw;
+                #addBtn{
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: center;
+                    height: 50px;
+                    line-height: 50px;
+                    border: 1px solid black;
+                }
+            }
+
+            .advOperators{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                button{
+                    text-align: center;
+                    margin: 0.5vw;
+                    height: 50px;
+                    line-height: 50px;
+                    border: 1px solid black;
+                }
+            }
+        }
+        .bottomBtns{
+            margin: 0.5vw;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            .numpad{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                button{
+                    text-align: center;
+                    margin: 0.5vw;
+                    height: 50px;
+                    line-height: 50px;
+                    border: 1px solid black;
+                }
+            }
+            .regOperators{
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                button{
+                    text-align: center;
+                    margin: 0.5vw;
+                    height: 50px;
+                    line-height: 50px;
+                    border: 1px solid black;
+                }
             }
         }
     }
