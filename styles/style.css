@@ -53,8 +53,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #theme #divisor .guestData .guestList .guestContainer {
@@ -75,7 +80,7 @@
   text-indent: 0.5vw;
 }
 
-#theme #divisor .guestData .guestList .more svg {
+#theme #divisor .guestData .more svg {
   margin: 0.5vw;
   border: 1px black solid;
   padding: 5px;

@@ -1,37 +1,8 @@
 console.log("Hola Mundo");
 const themeBtn = document.getElementById('themeBtn');
 const themeCont = document.getElementById('theme');
+const addMoreBtn = document.getElementById('more');
 
-//Calculate Amount per Guest
-
-document.getElementById('calculate').addEventListener('click',calculateAmnt);
-
-function calculateAmnt() {
-    const guests = getGuestList();
-    const results = document.getElementsByClassName('result')[0];
-    console.log(guests);
-    let totalAmnt = 0;
-    for (let i = 0; i < guests.length; i++) {
-        totalAmnt = guests[i].guestAmount + totalAmnt;
-    }
-    amountPerGuest = totalAmnt/guests.length;
-    console.log(totalAmnt, amountPerGuest);
-    for (let i = 0; i < guests.length; i++) {
-        let amntPay = amountPerGuest-guests[i].guestAmount;
-        if (amntPay < 0) {
-            let guestResult = document.createElement('span');
-            results.appendChild(guestResult);
-            guestResult.className = 'guestResult';
-            document.getElementsByClassName('guestResult')[i].innerHTML = guests[i].guestName + ' recibe: ' + amntPay * (-1);
-        } else {
-            let guestResult = document.createElement('span');
-            results.appendChild(guestResult);
-            guestResult.className = 'guestResult';
-            document.getElementsByClassName('guestResult')[i].innerHTML = guests[i].guestName + ' paga: ' + amntPay;
-        }
-        console.log(amntPay);
-    }
-}
 
 //Load theme
 window.onload = loadTheme();
@@ -59,6 +30,66 @@ function switchTheme() {
 }
 
 console.log(document.getElementsByClassName('guestContainer'));
+
+//Add More Guests
+addMoreBtn.addEventListener('click', addMoreGuests);
+
+function addMoreGuests() {
+    let newRow = document.createElement('li');
+    let newGuestLabel = document.createElement('label');
+    let newGuest = document.createElement('input');
+    let newAmountLabel = document.createElement('label');
+    let newAmount = document.createElement('input');
+    
+    document.getElementsByClassName('guestList')[0].appendChild(newRow);
+    newRow.className ='guestContainer';
+    newGuestLabel.className ='guestLbl';
+    newGuestLabel.htmlFor = 'guest';
+    newGuest.className = 'guest';
+    newGuest.type = 'text';
+    newGuest.name = 'guest';
+    newGuest.placeholder = 'Invitado';
+    newAmountLabel.className = 'amountLbl';
+    newAmountLabel.htmlFor = 'amount';
+    newAmount.className = 'amount';
+    newAmount.type = 'number';
+    newAmount.name = 'amount';
+    newAmount.defaultValue = '0';
+    newGuestLabel.innerHTML = 'Invitado ';
+    newAmountLabel.innerHTML = ' Monto ';
+    newRow.innerHTML = newGuestLabel.outerHTML + newGuest.outerHTML + newAmountLabel.outerHTML + newAmount.outerHTML;
+}
+
+//Calculate Amount per Guest
+
+document.getElementById('calculate').addEventListener('click',calculateAmnt);
+
+function calculateAmnt() {
+    const guests = getGuestList();
+    const results = document.getElementsByClassName('result')[0];
+    console.log(guests);
+    let totalAmnt = 0;
+    for (let i = 0; i < guests.length; i++) {
+        totalAmnt = guests[i].guestAmount + totalAmnt;
+    }
+    amountPerGuest = totalAmnt/guests.length;
+    amountRounded = Math.round(amountPerGuest);
+    for (let i = 0; i < guests.length; i++) {
+        let amntPay = amountRounded-guests[i].guestAmount;
+        if (amntPay < 0) {
+            let guestResult = document.createElement('span');
+            results.appendChild(guestResult);
+            guestResult.className = 'guestResult';
+            document.getElementsByClassName('guestResult')[i].innerHTML = guests[i].guestName + ' recibe: ' + amntPay * (-1);
+        } else {
+            let guestResult = document.createElement('span');
+            results.appendChild(guestResult);
+            guestResult.className = 'guestResult';
+            document.getElementsByClassName('guestResult')[i].innerHTML = guests[i].guestName + ' paga: ' + amntPay;
+        }
+        console.log(amntPay);
+    }
+}
 
 //Get guest data
 let guestList = document.getElementsByClassName('guestContainer')

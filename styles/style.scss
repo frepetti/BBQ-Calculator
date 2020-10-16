@@ -28,7 +28,8 @@
         justify-content: space-around;
         .guestData{
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            justify-content: space-evenly;
             .guestList{
                 .guestContainer{
                     margin: 0.5vw;
@@ -44,13 +45,14 @@
                         text-indent: 0.5vw;
                     }
                 }
-                .more{
-                    svg{
-                        margin: 0.5vw;
-                        border: 1px black solid;
-                        padding: 5px;
-                        border-radius: 95%;
-                    }
+
+            }
+            .more{
+                svg{
+                    margin: 0.5vw;
+                    border: 1px black solid;
+                    padding: 5px;
+                    border-radius: 95%;
                 }
             }
             #calculate{
