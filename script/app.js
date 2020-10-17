@@ -36,15 +36,12 @@ addMoreBtn.addEventListener('click', addMoreGuests);
 
 function addMoreGuests() {
     let newRow = document.createElement('li');
-    let newGuestLabel = document.createElement('label');
     let newGuest = document.createElement('input');
     let newAmountLabel = document.createElement('label');
     let newAmount = document.createElement('input');
     
     document.getElementsByClassName('guestList')[0].appendChild(newRow);
     newRow.className ='guestContainer';
-    newGuestLabel.className ='guestLbl';
-    newGuestLabel.htmlFor = 'guest';
     newGuest.className = 'guest';
     newGuest.type = 'text';
     newGuest.name = 'guest';
@@ -56,7 +53,7 @@ function addMoreGuests() {
     newAmount.name = 'amount';
     newAmount.defaultValue = '0';
     newGuestLabel.innerHTML = 'Invitado ';
-    newAmountLabel.innerHTML = ' Monto ';
+    newAmountLabel.innerHTML = ' $ ';
     newRow.innerHTML = newGuestLabel.outerHTML + newGuest.outerHTML + newAmountLabel.outerHTML + newAmount.outerHTML;
 }
 

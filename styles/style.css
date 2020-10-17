@@ -62,8 +62,31 @@
           justify-content: space-evenly;
 }
 
+#theme #divisor .guestData .guestList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 #theme #divisor .guestData .guestList .guestContainer {
   margin: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #theme #divisor .guestData .guestList .guestContainer input::-webkit-outer-spin-button,
@@ -78,6 +101,25 @@
 
 #theme #divisor .guestData .guestList .guestContainer input {
   text-indent: 0.5vw;
+}
+
+#theme #divisor .guestData .guestList .header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#theme #divisor .guestData .guestList .header h3 {
+  font-family: sans-serif;
+}
+
+#theme #divisor .guestData .guestList .header .guest {
+  margin-left: 5vw;
+}
+
+#theme #divisor .guestData .guestList .header .amount {
+  margin-left: 4vw;
 }
 
 #theme #divisor .guestData .more svg {

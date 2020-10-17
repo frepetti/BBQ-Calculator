@@ -31,18 +31,38 @@
             flex-direction: column;
             justify-content: space-evenly;
             .guestList{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
                 .guestContainer{
                     margin: 0.5vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
                     input::-webkit-outer-spin-button,
                     input::-webkit-inner-spin-button {
                     -webkit-appearance: none;
                     margin: 0;
+
                     }
                     input[type=number] {
                         -moz-appearance: textfield;
                     }
                     input{
                         text-indent: 0.5vw;
+                    }
+                }
+                .header{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    h3{
+                        font-family: sans-serif;
+                    }
+                    .guest{
+                        margin-left: 5vw;
+                    }
+                    .amount{
+                        margin-left: 4vw;
                     }
                 }
 
