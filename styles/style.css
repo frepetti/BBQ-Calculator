@@ -1,5 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo&family=Teko:wght@500;600&display=swap");
+.light header nav {
+  background-color: #81d4fa;
+}
+
+.light header nav .divisorTab:hover {
+  background-color: #29b6f6;
+}
+
+.dark header nav {
+  background-color: #01579b;
+}
+
 #theme {
-  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,11 +22,31 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  font-family: 'Exo', sans-serif;
+}
+
+#theme button {
+  font-family: 'Exo', sans-serif;
+}
+
+#theme input {
+  font-family: 'Exo', sans-serif;
+  border: 0;
+  border-bottom: 1px solid;
+}
+
+#theme header {
+  max-width: 360px;
+  width: 100%;
 }
 
 #theme header nav {
   height: 50px;
-  background-color: cornflowerblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +69,10 @@
 }
 
 #theme #divisor {
-  border: black 1px solid;
+  max-width: 360px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,6 +92,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 1vh 0;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -77,16 +113,13 @@
 
 #theme #divisor .guestData .guestList .guestContainer {
   margin: 0.5vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
 }
 
 #theme #divisor .guestData .guestList .guestContainer input::-webkit-outer-spin-button,
@@ -96,11 +129,23 @@
 }
 
 #theme #divisor .guestData .guestList .guestContainer input[type=number] {
+  border: 0;
   -moz-appearance: textfield;
+  border-bottom: 1px solid;
 }
 
 #theme #divisor .guestData .guestList .guestContainer input {
+  margin-left: 5vw;
   text-indent: 0.5vw;
+  width: 35vw;
+}
+
+#theme #divisor .guestData .guestList .guestContainer .amountCont {
+  margin-left: 4vw;
+}
+
+#theme #divisor .guestData .guestList .guestContainer .amountCont .amount {
+  width: 15vw;
 }
 
 #theme #divisor .guestData .guestList .header {
@@ -111,7 +156,7 @@
 }
 
 #theme #divisor .guestData .guestList .header h3 {
-  font-family: sans-serif;
+  font-size: 1em;
 }
 
 #theme #divisor .guestData .guestList .header .guest {
@@ -120,6 +165,16 @@
 
 #theme #divisor .guestData .guestList .header .amount {
   margin-left: 4vw;
+}
+
+#theme #divisor .guestData .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1vh;
 }
 
 #theme #divisor .guestData .more svg {
@@ -134,19 +189,24 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding: 1vh;
 }
 
 #theme #divisor .result {
   margin: 1vw;
+  padding: 1vw;
   border: 1px black solid;
   height: 30vh;
 }
 
 #theme #divisor .result span {
+  margin: 1vw;
   display: block;
 }
 
 #theme #calculator {
+  max-width: 360px;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: black 1px solid;

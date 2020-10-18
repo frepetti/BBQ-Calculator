@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Teko:wght@500;600&display=swap');
+@import './_light.scss';
+@import './_dark.scss';
+
 #theme{
-    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    font-family: 'Exo', sans-serif;
+    button{
+        font-family: 'Exo', sans-serif;
+    }
+    input{
+        font-family: 'Exo', sans-serif;
+        border: 0;
+        border-bottom: 1px solid;
+    }
     header{
+        max-width: 360px;
+        width: 100%;
         nav{
             height: 50px;
-            background-color: cornflowerblue;
             display: flex;
             justify-content: space-around;
             align-content: center;
@@ -22,13 +37,16 @@
         }
     }
     #divisor{
-        border: black 1px solid;
+        max-width: 360px;
+        width: 100%;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         .guestData{
             display: flex;
             flex-direction: column;
+            padding: 1vh 0;
             justify-content: space-evenly;
             .guestList{
                 display: flex;
@@ -36,9 +54,9 @@
                 justify-content: space-evenly;
                 .guestContainer{
                     margin: 0.5vw;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-evenly;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: space-evenly;
                     input::-webkit-outer-spin-button,
                     input::-webkit-inner-spin-button {
                     -webkit-appearance: none;
@@ -46,17 +64,27 @@
 
                     }
                     input[type=number] {
+                        border: 0;
                         -moz-appearance: textfield;
+                        border-bottom:1px solid ;
                     }
                     input{
+                        margin-left: 5vw;
                         text-indent: 0.5vw;
+                        width: 35vw;
+                    }
+                    .amountCont{
+                        margin-left: 4vw;
+                        .amount{
+                            width: 15vw;
+                        }
                     }
                 }
                 .header{
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     h3{
-                        font-family: sans-serif;
+                        font-size: 1em;
                     }
                     .guest{
                         margin-left: 5vw;
@@ -65,9 +93,11 @@
                         margin-left: 4vw;
                     }
                 }
-
             }
             .more{
+                display: flex;
+                justify-content: center;
+                padding: 1vh;
                 svg{
                     margin: 0.5vw;
                     border: 1px black solid;
@@ -78,18 +108,23 @@
             #calculate{
                 height: 5vh;
                 align-self: center;
+                padding: 1vh;
             }
         }
         .result{
             margin: 1vw;
+            padding: 1vw;
             border: 1px black solid;
             height: 30vh;
             span{
+                margin: 1vw;
                 display: block;
             }
         }
     }
     #calculator{
+        max-width: 360px;
+        width: 100%;
         box-sizing: border-box;
         border: black 1px solid;
         .display{

@@ -37,6 +37,7 @@ addMoreBtn.addEventListener('click', addMoreGuests);
 function addMoreGuests() {
     let newRow = document.createElement('li');
     let newGuest = document.createElement('input');
+    let newAmountCont = document.createElement('div');
     let newAmountLabel = document.createElement('label');
     let newAmount = document.createElement('input');
     
@@ -45,16 +46,17 @@ function addMoreGuests() {
     newGuest.className = 'guest';
     newGuest.type = 'text';
     newGuest.name = 'guest';
-    newGuest.placeholder = 'Invitado';
+    newGuest.placeholder = 'Nombre';
+    newAmountCont.className = 'amountCont';
     newAmountLabel.className = 'amountLbl';
     newAmountLabel.htmlFor = 'amount';
     newAmount.className = 'amount';
     newAmount.type = 'number';
     newAmount.name = 'amount';
     newAmount.defaultValue = '0';
-    newGuestLabel.innerHTML = 'Invitado ';
-    newAmountLabel.innerHTML = ' $ ';
-    newRow.innerHTML = newGuestLabel.outerHTML + newGuest.outerHTML + newAmountLabel.outerHTML + newAmount.outerHTML;
+    newAmountLabel.innerHTML = '$ ';
+    newAmountCont.innerHTML = newAmountLabel.outerHTML + newAmount.outerHTML;
+    newRow.innerHTML = newGuest.outerHTML + newAmountCont.outerHTML;
 }
 
 //Calculate Amount per Guest
@@ -93,9 +95,9 @@ let guestList = document.getElementsByClassName('guestContainer')
 
 function getGuestList(){
     let guests = [];
-    for (let i = 0; i < guestList.length; i++) {
-        let guestName = guestList[i].children[1].value;
-        let guestAmnt = parseFloat(guestList[i].children[3].value);
+    for (let i = 1; i < guestList.length; i++) {
+        let guestName = guestList[i].children[0].value;
+        let guestAmnt = parseFloat(guestList[i].children[1].children[1].value);
         if (guestName === '' || guestName === ' ') {
             break;
         }
