@@ -41,7 +41,6 @@
 }
 
 #theme header {
-  max-width: 360px;
   width: 100%;
 }
 
@@ -96,6 +95,40 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#theme #divisor .guestData .guestQtyCont {
+  margin: 3vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#theme #divisor .guestData .guestQtyCont label {
+  font-family: 'Exo', sans-serif;
+}
+
+#theme #divisor .guestData .guestQtyCont input::-webkit-outer-spin-button,
+#theme #divisor .guestData .guestQtyCont input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#theme #divisor .guestData .guestQtyCont input[type=number] {
+  border: 0;
+  -moz-appearance: textfield;
+  border-bottom: 1px solid;
+  margin-left: 5vw;
+  text-indent: 0.5vw;
+  width: 15vw;
+  text-align: center;
 }
 
 #theme #divisor .guestData .guestList {
@@ -132,10 +165,10 @@
   border: 0;
   -moz-appearance: textfield;
   border-bottom: 1px solid;
+  margin-left: 5vw;
 }
 
 #theme #divisor .guestData .guestList .guestContainer input {
-  margin-left: 5vw;
   text-indent: 0.5vw;
   width: 35vw;
 }
@@ -157,10 +190,6 @@
 
 #theme #divisor .guestData .guestList .header h3 {
   font-size: 1em;
-}
-
-#theme #divisor .guestData .guestList .header .guest {
-  margin-left: 5vw;
 }
 
 #theme #divisor .guestData .guestList .header .amount {

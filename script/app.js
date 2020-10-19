@@ -71,20 +71,24 @@ function calculateAmnt() {
     for (let i = 0; i < guests.length; i++) {
         totalAmnt = guests[i].guestAmount + totalAmnt;
     }
-    amountPerGuest = totalAmnt/guests.length;
+    amountPerGuest = totalAmnt/guestQty.value;
     amountRounded = Math.round(amountPerGuest);
+    let guestsPay = document.createElement('span');
+    results.appendChild(guestsPay)
+    guestsPay.className = 'guestResult';
+    document.getElementsByClassName('guestResult')[0].innerHTML = 'Cada uno paga: ' + amountRounded;
     for (let i = 0; i < guests.length; i++) {
         let amntPay = amountRounded-guests[i].guestAmount;
         if (amntPay < 0) {
             let guestResult = document.createElement('span');
             results.appendChild(guestResult);
             guestResult.className = 'guestResult';
-            document.getElementsByClassName('guestResult')[i].innerHTML = guests[i].guestName + ' recibe: ' + amntPay * (-1);
+            document.getElementsByClassName('guestResult')[i+1].innerHTML = guests[i].guestName + ' recibe: ' + amntPay * (-1);
         } else {
             let guestResult = document.createElement('span');
             results.appendChild(guestResult);
             guestResult.className = 'guestResult';
-            document.getElementsByClassName('guestResult')[i].innerHTML = guests[i].guestName + ' paga: ' + amntPay;
+            document.getElementsByClassName('guestResult')[i+1].innerHTML = guests[i].guestName + ' paga: ' + amntPay;
         }
         console.log(amntPay);
     }
