@@ -43,6 +43,7 @@
         flex-direction: column;
         justify-content: space-around;
         .guestData{
+            max-width: 360px;
             display: flex;
             flex-direction: column;
             padding: 1vh 0;
@@ -55,6 +56,7 @@
                 justify-content: center;
                 label{
                     font-family: 'Exo', sans-serif;
+                    display: inline;
                 }
                 input::-webkit-outer-spin-button,
                     input::-webkit-inner-spin-button {
@@ -62,12 +64,13 @@
                     margin: 0;
                 }
                 input[type=number] {
-                    border: 0;
                     -moz-appearance: textfield;
+                }
+                input{
                     border-bottom:1px solid;
                     margin-left: 5vw;
                     text-indent: 0.5vw;
-                    width: 15vw;
+                    width: 50px;
                     text-align: center;
                 }
             }
@@ -89,16 +92,22 @@
                         border: 0;
                         -moz-appearance: textfield;
                         border-bottom:1px solid;
-                        margin-left: 5vw;
+
                     }
                     input{
                         text-indent: 0.5vw;
-                        width: 35vw;
+                        width: 150px;
                     }
                     .amountCont{
-                        margin-left: 4vw;
+                        margin-left: 30px;
+                        display: flex;
+                        justify-content: space-evenly;
+                        height: 20px;
+                        label{
+                            line-height: 20px;
+                        }
                         .amount{
-                            width: 15vw;
+                            width: 60px;
                         }
                     }
                 }
@@ -112,7 +121,7 @@
 
                     }
                     .amount{
-                        margin-left: 4vw;
+                        margin-left: 45px;
                     }
                 }
             }

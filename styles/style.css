@@ -84,6 +84,7 @@
 }
 
 #theme #divisor .guestData {
+  max-width: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,6 +114,7 @@
 
 #theme #divisor .guestData .guestQtyCont label {
   font-family: 'Exo', sans-serif;
+  display: inline;
 }
 
 #theme #divisor .guestData .guestQtyCont input::-webkit-outer-spin-button,
@@ -122,12 +124,14 @@
 }
 
 #theme #divisor .guestData .guestQtyCont input[type=number] {
-  border: 0;
   -moz-appearance: textfield;
+}
+
+#theme #divisor .guestData .guestQtyCont input {
   border-bottom: 1px solid;
   margin-left: 5vw;
   text-indent: 0.5vw;
-  width: 15vw;
+  width: 50px;
   text-align: center;
 }
 
@@ -165,20 +169,30 @@
   border: 0;
   -moz-appearance: textfield;
   border-bottom: 1px solid;
-  margin-left: 5vw;
 }
 
 #theme #divisor .guestData .guestList .guestContainer input {
   text-indent: 0.5vw;
-  width: 35vw;
+  width: 150px;
 }
 
 #theme #divisor .guestData .guestList .guestContainer .amountCont {
-  margin-left: 4vw;
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 20px;
+}
+
+#theme #divisor .guestData .guestList .guestContainer .amountCont label {
+  line-height: 20px;
 }
 
 #theme #divisor .guestData .guestList .guestContainer .amountCont .amount {
-  width: 15vw;
+  width: 60px;
 }
 
 #theme #divisor .guestData .guestList .header {
@@ -193,7 +207,7 @@
 }
 
 #theme #divisor .guestData .guestList .header .amount {
-  margin-left: 4vw;
+  margin-left: 45px;
 }
 
 #theme #divisor .guestData .more {
