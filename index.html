@@ -13,14 +13,14 @@
     <div id="theme" class="light">
         <header>
             <nav>
-                <div class="divisorTab">Divisor</div>
-                <div class="calcTab">Calculator</div>
+                <button class="divisorTab btn" id="divisorTab">Divisor</button>
+                <button class="calcTab btn" id="calcTab">Calculator</button>
                 <div id="themeBtn">
                     <i class="fas fa-adjust"></i>
                 </div>
             </nav>
         </header>
-        <section id="divisor">
+        <section id="divisor" class="divisor active">
             <div class="guestData">
                 <div class="guestQtyCont">
                     <label for="guestQty">Cantidad de Invitados</label>
@@ -60,7 +60,7 @@
                 
             </div>
         </section>
-        <section id="calculator">
+        <section id="calculator" class="calculator">
             <div class="display">
                 <input type="number" id="display" placeholder="0">
             </div>
