@@ -71,7 +71,7 @@ document.getElementById('calculate').addEventListener('click',calculateAmnt);
 
 function calculateAmnt() {
     const guests = getGuestList();
-    const results = document.getElementsByClassName('result')[0];
+    const results = document.getElementById('result');
     console.log(guests);
     let totalAmnt = 0;
     for (let i = 0; i < guests.length; i++) {
@@ -98,6 +98,7 @@ function calculateAmnt() {
         }
         console.log(amntPay);
     }
+    results.style.display = "block";
 }
 
 //Get guest data

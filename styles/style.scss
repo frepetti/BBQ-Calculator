@@ -11,6 +11,7 @@
     font-family: 'Exo', sans-serif;
     button{
         font-family: 'Exo', sans-serif;
+        border: 0;
     }
     input{
         font-family: 'Exo', sans-serif;
@@ -25,11 +26,9 @@
             grid-template-columns: 1fr 1fr 50px;
             align-content: center;
             .divisorTab{
-                border: 0;
                 line-height: 50px;
             }
             .calcTab{
-                border: 0;
                 line-height: 50px;
             }
             #themeBtn{
@@ -140,22 +139,21 @@
                 padding: 1vh;
                 svg{
                     margin: 0.5vw;
-                    border: 1px black solid;
                     padding: 5px;
-                    border-radius: 95%;
+                    border-radius: 100%;
                 }
             }
-            #calculate{
-                height: 5vh;
+            .calculate{
+                height: 6vh;
                 align-self: center;
                 padding: 1vh;
             }
         }
         .result{
+            display: none;
             margin: 1vw;
             padding: 1vw;
-            border: 1px black solid;
-            height: 30vh;
+            height: auto;
             span{
                 margin: 1vw;
                 display: block;
@@ -176,15 +174,16 @@
         max-width: 360px;
         width: 100%;
         box-sizing: border-box;
-        border: black 1px solid;
+        padding-bottom: 1vh;
         .display{
             position: relative;
             box-sizing: border-box;
             margin: 1vw;
+            padding-top: 1vh;
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
             -webkit-appearance: none;
-            margin: 0;
+            margin: 0.5vw;
             }
             input[type=number] {
                 -moz-appearance: textfield;
@@ -198,7 +197,7 @@
         }
         .topBtns{
             position: relative;
-            margin: 0.5vw;
+            margin: 0 1vw 0 1vw;
             display: flex;
             box-sizing: border-box;
             flex-direction: column;
@@ -206,14 +205,12 @@
             align-content: center;
             .addBtn{
                 box-sizing: border-box;
-                margin: 0.5vw;
                 #addBtn{
                     width: 100%;
                     box-sizing: border-box;
                     text-align: center;
                     height: 50px;
                     line-height: 50px;
-                    border: 1px solid black;
                 }
             }
             .advOperators{
@@ -222,16 +219,15 @@
                 grid-template-rows: 1fr 1fr;
                 button{
                     text-align: center;
-                    margin: 0.5vw;
+                    //margin: 0.5vw;
                     height: 50px;
                     line-height: 50px;
-                    border: 1px solid black;
                 }
             }
         }
         .bottomBtns{
             position: relative;
-            margin: 0.5vw;
+            margin: 0 1vw 0 1vw;
             display: grid;
             grid-template-columns: 3fr 1fr;
             .numpad{
@@ -240,10 +236,8 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 button{
                     text-align: center;
-                    margin: 0.5vw;
                     height: 50px;
                     line-height: 50px;
-                    border: 1px solid black;
                 }
             }
             .regOperators{
@@ -251,10 +245,8 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 button{
                     text-align: center;
-                    margin: 0.5vw;
                     height: 50px;
                     line-height: 50px;
-                    border: 1px solid black;
                 }
             }
         }

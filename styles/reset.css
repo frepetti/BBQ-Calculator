@@ -29,6 +29,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+button:focus{
+	outline: none;
+}
+button{
+	padding: 0;
+}
 body {
 	line-height: 1;
 }
