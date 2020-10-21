@@ -21,7 +21,7 @@
     header{
         width: 100%;
         nav{
-            height: 6vh;
+            height: 7vh;
             display: grid;
             grid-template-columns: 1fr 1fr 50px;
             align-content: center;
@@ -41,9 +41,9 @@
     }
     .divisor{
         transition: max-height 0.5s ease-out;
-        height: auto;
+        height: 93vh;
         max-height: 0px;
-        max-width: 600px;
+        max-width: 100vw;
         overflow: hidden;
         width: 100%;
         box-sizing: border-box;
@@ -164,23 +164,22 @@
     }
     .divisor.active{
         transition: max-height 0.5s ease-out;
-        height: auto;
-        max-height: 480px;
+        height: 93vh;
+        max-height: 96vh;
     }
     .calculator{
         transition: max-height 0.5s ease-out;
-        height: auto;
+        height: 93vh;
         max-height: 0px;
         max-width: 600px;
         overflow: hidden;
-        width: 100%;
+        width: 100vw;
         box-sizing: border-box;
-        padding-bottom: 1vh;
         .display{
             position: relative;
             box-sizing: border-box;
             margin: 1vw;
-            padding-top: 1vh;
+            height: 15vh;
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -192,7 +191,7 @@
             input{
                 box-sizing: border-box;
                 width: 100%;
-                height: 15vh;
+                height: 100%;
                 text-indent: 1vw;
                 font-size: 4em;
             }
@@ -210,7 +209,7 @@
                     width: 100%;
                     box-sizing: border-box;
                     text-align: center;
-                    height: 12vh;
+                    height: 13vh;
                     line-height: 50px;
                 }
             }
@@ -220,7 +219,7 @@
                 grid-template-rows: 1fr 1fr;
                 button{
                     text-align: center;
-                    height: 11vh;
+                    height: 10vh;
                     line-height: 50px;
                 }
             }
@@ -252,7 +251,7 @@
     }
     .calculator.active{
         transition: max-height 0.5s ease-out;
-        height: 800px;
-        max-height: 100vh;
+        height: 93vh;
+        max-height: 93vh;
     }
 }

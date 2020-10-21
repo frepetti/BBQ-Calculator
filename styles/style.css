@@ -71,7 +71,7 @@
 }
 
 #theme header nav {
-  height: 6vh;
+  height: 7vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 50px;
@@ -104,9 +104,9 @@
 #theme .divisor {
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
-  height: auto;
+  height: 93vh;
   max-height: 0px;
-  max-width: 600px;
+  max-width: 100vw;
   overflow: hidden;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -292,21 +292,20 @@
 #theme .divisor.active {
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
-  height: auto;
-  max-height: 480px;
+  height: 93vh;
+  max-height: 96vh;
 }
 
 #theme .calculator {
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
-  height: auto;
+  height: 93vh;
   max-height: 0px;
   max-width: 600px;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-bottom: 1vh;
 }
 
 #theme .calculator .display {
@@ -314,7 +313,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 1vw;
-  padding-top: 1vh;
+  height: 15vh;
 }
 
 #theme .calculator .display input::-webkit-outer-spin-button,
@@ -331,7 +330,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  height: 15vh;
+  height: 100%;
   text-indent: 1vw;
   font-size: 4em;
 }
@@ -364,7 +363,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
-  height: 12vh;
+  height: 13vh;
   line-height: 50px;
 }
 
@@ -379,7 +378,7 @@
 
 #theme .calculator .topBtns .advOperators button {
   text-align: center;
-  height: 11vh;
+  height: 10vh;
   line-height: 50px;
 }
 
@@ -422,7 +421,7 @@
 #theme .calculator.active {
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
-  height: 800px;
-  max-height: 100vh;
+  height: 93vh;
+  max-height: 93vh;
 }
 /*# sourceMappingURL=style.css.map */
