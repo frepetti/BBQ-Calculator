@@ -71,7 +71,7 @@
 }
 
 #theme header nav {
-  height: 50px;
+  height: 6vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 50px;
@@ -338,7 +338,6 @@
 
 #theme .calculator .topBtns {
   position: relative;
-  margin: 0 1vw 0 1vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,13 +379,12 @@
 
 #theme .calculator .topBtns .advOperators button {
   text-align: center;
-  height: 12vh;
+  height: 11vh;
   line-height: 50px;
 }
 
 #theme .calculator .bottomBtns {
   position: relative;
-  margin: 0 1vw 0 1vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 1fr;
@@ -404,7 +402,7 @@
 
 #theme .calculator .bottomBtns .numpad button {
   text-align: center;
-  height: 12vh;
+  height: 11vh;
   line-height: 50px;
 }
 
@@ -417,7 +415,7 @@
 
 #theme .calculator .bottomBtns .regOperators button {
   text-align: center;
-  height: 12vh;
+  height: 11vh;
   line-height: 50px;
 }
 

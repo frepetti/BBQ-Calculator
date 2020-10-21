@@ -21,7 +21,7 @@
     header{
         width: 100%;
         nav{
-            height: 50px;
+            height: 6vh;
             display: grid;
             grid-template-columns: 1fr 1fr 50px;
             align-content: center;
@@ -199,7 +199,6 @@
         }
         .topBtns{
             position: relative;
-            margin: 0 1vw 0 1vw;
             display: flex;
             box-sizing: border-box;
             flex-direction: column;
@@ -221,14 +220,13 @@
                 grid-template-rows: 1fr 1fr;
                 button{
                     text-align: center;
-                    height: 12vh;
+                    height: 11vh;
                     line-height: 50px;
                 }
             }
         }
         .bottomBtns{
             position: relative;
-            margin: 0 1vw 0 1vw;
             display: grid;
             grid-template-columns: 3fr 1fr;
             .numpad{
@@ -237,7 +235,7 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 button{
                     text-align: center;
-                    height: 12vh;
+                    height: 11vh;
                     line-height: 50px;
                 }
             }
@@ -246,7 +244,7 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 button{
                     text-align: center;
-                    height: 12vh;
+                    height: 11vh;
                     line-height: 50px;
                 }
             }
