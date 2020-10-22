@@ -1,5 +1,5 @@
 const addMoreBtn = document.getElementById('more');
-const divisor = document.getElementById('divisor');
+
 
 //Add More Guests
 addMoreBtn.addEventListener('click', addMoreGuests);
@@ -96,5 +96,3 @@ function addMoreGuests() {
     newAmountCont.innerHTML = newAmountLabel.outerHTML + newAmount.outerHTML;
     newRow.innerHTML = newGuest.outerHTML + newAmountCont.outerHTML;
 }
-
-export { calculateAmnt, addMoreGuests };

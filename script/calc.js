@@ -23,3 +23,4 @@ const fracBtn = document.getElementById('fraction');
 const expBtn = document.getElementById('exponential');
 const rootBtn = document.getElementById('root');
 const addBtn = document.getElementById('addBtn');
+const calcDisplay = document.getElementById('display');

@@ -3,6 +3,7 @@ const themeCont = document.getElementById('theme');
 const divisorTab = document.getElementById('divisorTab');
 const calcTab = document.getElementById('calcTab');
 const calculator = document.getElementById('calculator');
+const divisor = document.getElementById('divisor');
 let themeCounter = 0;
 
 //Select Function
