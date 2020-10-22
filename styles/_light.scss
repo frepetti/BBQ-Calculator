@@ -1,8 +1,4 @@
-$color1: #b0bec5;
-$color2: #90a4ae;
-$color3: #eceff1;
-$color4: #cfd8dc;
-$color5: #263238;
+@import './_variables.scss';
 
 
 
@@ -31,15 +27,10 @@ $color5: #263238;
             }
             .more{
                 svg{
-                    border: $color1;
+                    border: 1px $color1 solid;
                     background-color: $color1;
                 }
             }
-        }
-        .result{
-            //background-color: $color1;
-            //border: $color5;
-            //box-shadow: 0 0 1px 1px $color5;
         }
     }
     .calculator{

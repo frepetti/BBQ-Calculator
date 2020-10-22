@@ -12,7 +12,7 @@
 }
 
 .light .divisor .guestData .more svg {
-  border: #b0bec5;
+  border: 1px #b0bec5 solid;
   background-color: #b0bec5;
 }
 
@@ -33,7 +33,41 @@
 }
 
 .dark header nav {
-  background-color: #01579b;
+  color: #cfd8dc;
+  background-color: #15202B;
+}
+
+.dark header nav .active, .dark header nav .btn:hover {
+  background-color: #192633;
+}
+
+.dark .divisor {
+  color: #b0bec5;
+  background-color: #1B2A38;
+}
+
+.dark .divisor .guestData .more svg {
+  -webkit-box-shadow: 0 0 4px 0 #b0bec5;
+          box-shadow: 0 0 4px 0 #b0bec5;
+  background-color: #1B2A38;
+}
+
+.dark .calculator {
+  background-color: #1B2A38;
+}
+
+.dark .btn {
+  color: #cfd8dc;
+  background-color: #15202B;
+}
+
+.dark .btn:hover, .dark .btn:active {
+  background-color: #15202B;
+}
+
+.dark input {
+  color: #90a4ae;
+  background-color: #1B2A38;
 }
 
 #theme {
@@ -118,8 +152,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

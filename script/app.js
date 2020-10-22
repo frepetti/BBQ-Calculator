@@ -59,7 +59,7 @@ function addMoreGuests() {
     newAmount.className = 'amount';
     newAmount.type = 'number';
     newAmount.name = 'amount';
-    newAmount.defaultValue = '0';
+    newAmount.placeholder = '0';
     newAmountLabel.innerHTML = '$ ';
     newAmountCont.innerHTML = newAmountLabel.outerHTML + newAmount.outerHTML;
     newRow.innerHTML = newGuest.outerHTML + newAmountCont.outerHTML;
@@ -72,7 +72,6 @@ document.getElementById('calculate').addEventListener('click',calculateAmnt);
 function calculateAmnt() {
     const guests = getGuestList();
     const results = document.getElementById('result');
-    console.log(guests);
     let totalAmnt = 0;
     for (let i = 0; i < guests.length; i++) {
         totalAmnt = guests[i].guestAmount + totalAmnt;
@@ -108,14 +107,14 @@ function getGuestList(){
     let guests = [];
     for (let i = 1; i < guestList.length; i++) {
         let guestName = guestList[i].children[0].value;
-        let guestAmnt = parseFloat(guestList[i].children[1].children[1].value);
+        let guestAmnt = guestList[i].children[1].children[1].value;
         if (guestName === '' || guestName === ' ') {
             break;
         }
         if (guestAmnt === '' || guestAmnt === ' ') {
             guestAmnt = 0;
         }
-        let guest = new Guest(guestName, guestAmnt);
+        let guest = new Guest(guestName, parseFloat(guestAmnt));
         guests.push(guest);
     }
     //console.log(guests);
