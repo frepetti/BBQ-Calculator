@@ -1,39 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo&family=Teko:wght@500;600&display=swap");
 .light header nav {
-  background-color: #b0bec5;
+  background-color: #78909c;
 }
 
 .light header nav .active, .light header nav .btn:hover {
-  background-color: #90a4ae;
+  background-color: #546e7a;
 }
 
 .light .divisor {
-  background-color: #eceff1;
+  background-color: #cfd8dc;
 }
 
 .light .divisor .guestData .more svg {
-  border: 1px #b0bec5 solid;
-  background-color: #b0bec5;
+  border: 1px #78909c solid;
+  background-color: #78909c;
 }
 
 .light .calculator {
-  background-color: #eceff1;
+  background-color: #cfd8dc;
 }
 
 .light .btn {
-  background-color: #b0bec5;
+  background-color: #78909c;
 }
 
 .light .btn:hover, .light .btn:active {
-  background-color: #90a4ae;
+  background-color: #546e7a;
 }
 
 .light input {
-  background-color: #eceff1;
+  background-color: #cfd8dc;
 }
 
 .dark header nav {
-  color: #cfd8dc;
+  color: #eceff1;
   background-color: #15202B;
 }
 
@@ -42,13 +42,13 @@
 }
 
 .dark .divisor {
-  color: #b0bec5;
+  color: #eceff1;
   background-color: #1B2A38;
 }
 
 .dark .divisor .guestData .more svg {
-  -webkit-box-shadow: 0 0 4px 0 #b0bec5;
-          box-shadow: 0 0 4px 0 #b0bec5;
+  -webkit-box-shadow: 0 0 4px 0 #eceff1;
+          box-shadow: 0 0 4px 0 #eceff1;
   background-color: #1B2A38;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .dark .btn {
-  color: #cfd8dc;
+  color: #eceff1;
   background-color: #15202B;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .dark input {
-  color: #90a4ae;
+  color: #eceff1;
   background-color: #1B2A38;
 }
 
@@ -115,15 +115,17 @@
 }
 
 #theme header nav .divisorTab {
-  line-height: 50px;
+  line-height: 7vh;
+  height: 7vh;
 }
 
 #theme header nav .calcTab {
-  line-height: 50px;
+  line-height: 7vh;
+  height: 7vh;
 }
 
 #theme header nav #themeBtn {
-  line-height: 50px;
+  line-height: 7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +160,6 @@
 }
 
 #theme .divisor .guestData {
-  max-width: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,6 +287,7 @@
 }
 
 #theme .divisor .guestData .more {
+  margin: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,7 +304,8 @@
 }
 
 #theme .divisor .guestData .calculate {
-  height: 6vh;
+  margin: 5vh;
+  height: 45px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -333,7 +336,7 @@
   transition: max-height 0.5s ease-out;
   height: 93vh;
   max-height: 0px;
-  max-width: 600px;
+  max-width: 100vw;
   overflow: hidden;
   width: 100vw;
   -webkit-box-sizing: border-box;

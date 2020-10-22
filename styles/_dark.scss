@@ -1,10 +1,4 @@
-$color1: #b0bec5;
-$color2: #90a4ae;
-$color3: #eceff1;
-$color4: #cfd8dc;
-$color5: #263238;
-
-
+@import './_variables.scss';
 
 .dark{
     header{
@@ -17,7 +11,7 @@ $color5: #263238;
         }
     }
     .divisor{
-        color: $color1;
+        color: $color4;
         background-color: $color7;
         .guestData{
             .guestQtyCont{
@@ -34,7 +28,7 @@ $color5: #263238;
             .more{
                 svg{
                     //border: 1px $color4 solid;
-                    box-shadow: 0 0 4px 0 $color1;
+                    box-shadow: 0 0 4px 0 $color4;
                     background-color: $color7;
                 }
             }
@@ -58,7 +52,7 @@ $color5: #263238;
         background-color: $color6;
     }
     input{
-        color: $color2;
+        color: $color4;
         background-color: $color7;
     }
 }
