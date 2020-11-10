@@ -41,26 +41,47 @@ numpad.addEventListener('click', insertNumb);
 const operator = (clickedBtn) => {
     const target = clickedBtn.target;
     let id = evalBtnClick(target);
+    let i = calc.input.length;
     switch (id) {
+        case "divide":
+            if (calc.input[i] === '*' || calc.input[i] === '/' || calc.input[i] === '+' || calc.input[i] === '-' || calcDisplay.value === '') {
+                return
+            } else{
+                calc.input.push(calcDisplay.value);
+                supDisplay.innerHTML  += calcDisplay.value + '/';
+                calcDisplay.value = '';
+                calc.input.push('/');
+            }
+            break;
         case "mult":
-            calc.input.push(calcDisplay.value);
-            supDisplay.innerHTML  += calcDisplay.value;
-            calcDisplay.value = '';
-            calc.input.push('*');
-            supDisplay.innerHTML  += '*';
+            if (calc.input[i] === '*' || calc.input[i] === '/' || calc.input[i] === '+' || calc.input[i] === '-' || calcDisplay.value === '') {
+                return
+            } else{
+                calc.input.push(calcDisplay.value);
+                supDisplay.innerHTML  += calcDisplay.value + '*';
+                calcDisplay.value = '';
+                calc.input.push('*');
+            }
             break;
         case "minus":
-            calc.input.push(calcDisplay.value);
-            supDisplay.innerHTML  += calcDisplay.value;
-            calcDisplay.value = '';
-            calc.input.push('-');
-            supDisplay.innerHTML  += '-';
+            if (calc.input[i] === '*' || calc.input[i] === '/' || calc.input[i] === '+' || calc.input[i] === '-' || calcDisplay.value === '') {
+                return
+            } else {
+                calc.input.push(calcDisplay.value);
+                supDisplay.innerHTML  += calcDisplay.value + '-';
+                calcDisplay.value = '';
+                calc.input.push('-');
+            }
             break;
         case "plus":
-            calc.input.push(calcDisplay.value);
-            supDisplay.innerHTML  += calcDisplay.value + '+';
-            calcDisplay.value = '';
-            calc.input.push('+');
+            if (calc.input[i] === '*' || calc.input[i] === '/' || calc.input[i] === '+' || calc.input[i] === '-' || calcDisplay.value === '') {
+                return
+            } else {
+                calc.input.push(calcDisplay.value);
+                supDisplay.innerHTML  += calcDisplay.value + '+';
+                calcDisplay.value = '';
+                calc.input.push('+');
+            }
             break;
         case "result":
             calc.input.push(calcDisplay.value);
@@ -108,14 +129,6 @@ const operator = (clickedBtn) => {
                 supDisplay.innerHTML += '√'+ calcDisplay.value;
                 calcDisplay.value = '';
             }
-            break;
-        case "divide":
-            calc.input.push(calcDisplay.value);
-            supDisplay.innerHTML  += calcDisplay.value;
-            calcDisplay.value = '';
-            calc.input.push('/');
-            supDisplay.innerHTML  += '/';
-            console.log(calc.input);
             break;
         default:
             calcDisplay.value += target.value;
