@@ -56,6 +56,10 @@
   background-color: #1B2A38;
 }
 
+.dark .calculator .display {
+  color: #eceff1;
+}
+
 .dark .btn {
   color: #eceff1;
   background-color: #15202B;
@@ -348,13 +352,18 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 1vw;
-  height: 15vh;
 }
 
 #theme .calculator .display input::-webkit-outer-spin-button,
 #theme .calculator .display input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0.5vw;
+}
+
+#theme .calculator .display #supDisplay {
+  height: 6vh;
+  text-indent: 1vw;
+  font-size: 2em;
 }
 
 #theme .calculator .display input[type=number] {
@@ -365,7 +374,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: 15vh;
   text-indent: 1vw;
   font-size: 4em;
 }
@@ -436,7 +445,7 @@
 
 #theme .calculator .bottomBtns .numpad button {
   text-align: center;
-  height: 11vh;
+  height: 10vh;
   line-height: 50px;
 }
 
@@ -449,7 +458,7 @@
 
 #theme .calculator .bottomBtns .regOperators button {
   text-align: center;
-  height: 11vh;
+  height: 10vh;
   line-height: 50px;
 }
 

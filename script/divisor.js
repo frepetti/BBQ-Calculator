@@ -62,7 +62,7 @@ function getGuestList(){
     return guests;
 }
 
-//Create guest
+//  te guest
 class Guest{
     constructor(name, amount){
         this.guestName = name;

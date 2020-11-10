@@ -181,11 +181,15 @@
             position: relative;
             box-sizing: border-box;
             margin: 1vw;
-            height: 15vh;
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0.5vw;
+            }
+            #supDisplay{
+                height: 6vh;
+                text-indent: 1vw;
+                font-size: 2em;
             }
             input[type=number] {
                 -moz-appearance: textfield;
@@ -193,7 +197,7 @@
             input{
                 box-sizing: border-box;
                 width: 100%;
-                height: 100%;
+                height: 15vh;
                 text-indent: 1vw;
                 font-size: 4em;
             }
@@ -236,7 +240,7 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 button{
                     text-align: center;
-                    height: 11vh;
+                    height: 10vh;
                     line-height: 50px;
                 }
             }
@@ -245,7 +249,7 @@
                 grid-template-rows: 1fr 1fr 1fr 1fr;
                 button{
                     text-align: center;
-                    height: 11vh;
+                    height: 10vh;
                     line-height: 50px;
                 }
             }
