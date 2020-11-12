@@ -163,6 +163,7 @@ const addAmntGuest = (clickedGuest) => {
             return
         }
     }
+    selectDivisor();
 }
 
 guestListCont.addEventListener('click', addAmntGuest);
