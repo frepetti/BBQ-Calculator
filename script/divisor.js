@@ -1,18 +1,35 @@
 const addMoreBtn = document.getElementById('more');
+const clearForm = document.getElementById('clearForm');
+const calculateBtn = document.getElementById('calculate');
+const results = document.getElementById('result');
+const guestList = document.getElementsByClassName('guestContainer');
+const guestQty = document.getElementById('guestQty');
+
+//Clear data
+
+function clearData() {
+    for (let i = 1; i < guestList.length; i++) {
+        guestList[i].children[0].value = '';
+        guestList[i].children[1].children[1].value = '';
+    }
+    guestQty.value = '';
+    results.innerHTML = '';
+}
+
+clearForm.addEventListener('click',clearData);
 
 
 //Add More Guests
 addMoreBtn.addEventListener('click', addMoreGuests);
 
 //Calculate btn
-document.getElementById('calculate').addEventListener('click',calculateAmnt);
+calculateBtn.addEventListener('click',calculateAmnt);
 
 
 //Calculate amount per guest
 
 function calculateAmnt() {
     const guests = getGuestList();
-    const results = document.getElementById('result');
     let totalAmnt = 0;
     for (let i = 0; i < guests.length; i++) {
         totalAmnt = guests[i].guestAmount + totalAmnt;
@@ -42,7 +59,7 @@ function calculateAmnt() {
 };
 
 //Get guest data
-let guestList = document.getElementsByClassName('guestContainer')
+
 
 function getGuestList(){
     let guests = [];
@@ -62,7 +79,7 @@ function getGuestList(){
     return guests;
 }
 
-//  te guest
+// Create guest
 class Guest{
     constructor(name, amount){
         this.guestName = name;

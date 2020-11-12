@@ -1,6 +1,7 @@
 @import './_variables.scss';
 
 .dark{
+    background-color: $color7;
     header{
         nav{
             color: $color4;
@@ -39,8 +40,18 @@
             //box-shadow: 0 0 1px 1px $color5;
         }
     }
+    .guestListPop{
+        #guestListCont{
+            .guest{
+                background-color: $color8;
+                border: $color2 solid 1px;
+                color: $color4;
+            }
+        }
+    }
     .calculator{
         background-color: $color7;
+
         .btn{
         }
         .display{

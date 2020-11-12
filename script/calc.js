@@ -4,7 +4,10 @@ const supDisplay = document.getElementById('supDisplay');
 const numpad = document.querySelector('.numpad');
 const regOperators = document.querySelector('.regOperators');
 const advOperators = document.querySelector('.advOperators');
-
+const guestsList = document.getElementsByClassName('guestContainer');
+const guestListCont = document.getElementById('guestListCont');
+const guestListPop = document.getElementsByClassName('guestListPop');
+const guestAmount = document.getElementsByClassName('amount');
 
 //Calculator object
 
@@ -136,11 +139,9 @@ const operator = (clickedBtn) => {
     }
 }
 
+//Listen for button click on operator buttons
 regOperators.addEventListener('click', operator);
 advOperators.addEventListener('click', operator);
-
-//Advenced Operators
-
 
 //Function to evaluete clicked button id
 function evalBtnClick(node){
@@ -150,3 +151,53 @@ function evalBtnClick(node){
     return node.id;
 }
 
+//Add amount to guest
+const guestBox = document.getElementsByClassName('guest');
+
+const addAmntGuest = (clickedGuest) => {
+    const target = clickedGuest.target;
+    for (let i = 0; i < guestList.length; i++) {
+        if (guestList[i].children[0].value === target.innerHTML) {
+            guestAmount[i-1].value = calcDisplay.value;
+            calcDisplay.value = '';
+            return
+        }
+    }
+}
+
+guestListCont.addEventListener('click', addAmntGuest);
+
+//Display Popup Guest List
+addBtn.addEventListener('click', getGuests);
+
+
+
+//Close Guest List Pop and clear it
+
+guestListPop[0].addEventListener('click',() =>  {
+    guestListPop[0].style.display = 'none';
+    guestListCont.innerHTML = '';
+})
+
+//Function to retrieve guests
+
+function getGuests() {
+    let guests = [];
+    for (let i = 1; i < guestList.length; i++) {
+        let guestName = guestList[i].children[0].value;
+        if (guestName === '' || guestName === ' ') {
+            break;
+        }
+        addGuest(guestName);
+        guests.push(guestName);
+    }
+    guestListPop[0].style.display = 'flex';
+}
+
+//Add guests to Popup list
+function addGuest(guestName) {
+    guestBoxC = document.createElement('div');
+    guestBoxC.className = 'guest';
+    guestBoxC.innerHTML = guestName;
+    guestListCont.appendChild(guestBoxC);
+}

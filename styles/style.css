@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo&family=Teko:wght@500;600&display=swap");
+.light {
+  background-color: #cfd8dc;
+}
+
 .light header nav {
   background-color: #78909c;
 }
@@ -16,6 +20,11 @@
   background-color: #78909c;
 }
 
+.light .guestListPop #guestListCont .guest {
+  background-color: #cfd8dc;
+  border: #78909c solid 1px;
+}
+
 .light .calculator {
   background-color: #cfd8dc;
 }
@@ -30,6 +39,10 @@
 
 .light input {
   background-color: #cfd8dc;
+}
+
+.dark {
+  background-color: #1B2A38;
 }
 
 .dark header nav {
@@ -50,6 +63,12 @@
   -webkit-box-shadow: 0 0 4px 0 #eceff1;
           box-shadow: 0 0 4px 0 #eceff1;
   background-color: #1B2A38;
+}
+
+.dark .guestListPop #guestListCont .guest {
+  background-color: #192633;
+  border: #546e7a solid 1px;
+  color: #eceff1;
 }
 
 .dark .calculator {
@@ -286,7 +305,7 @@
   margin: 2vh 0 2vh 0;
 }
 
-#theme .divisor .guestData .guestList .header .amount {
+#theme .divisor .guestData .guestList .header .amountTitle {
   margin-left: 45px;
 }
 
@@ -310,6 +329,17 @@
 #theme .divisor .guestData .calculate {
   margin: 5vh;
   height: 45px;
+  width: 75px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 1vh;
+}
+
+#theme .divisor .guestData .clear {
+  margin: 5vh;
+  height: 45px;
+  width: 75px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -335,14 +365,59 @@
   max-height: 96vh;
 }
 
+#theme .guestListPop {
+  height: 100%;
+  width: 100vw;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+#theme .guestListPop #guestListCont {
+  max-height: 40vh;
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 2px 0;
+}
+
+#theme .guestListPop #guestListCont .guest {
+  text-align: center;
+  width: 100%;
+  height: 8vh;
+  line-height: 8vh;
+  font-size: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#theme .guestListPop #guestListCont::-webkit-scrollbar {
+  display: none;
+}
+
 #theme .calculator {
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
   height: 93vh;
   max-height: 0px;
-  max-width: 100vw;
+  max-width: 600px;
   overflow: hidden;
-  width: 100vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -407,7 +482,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
-  height: 13vh;
+  height: 9vh;
   line-height: 50px;
 }
 

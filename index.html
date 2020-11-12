@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <button class="divisorTab btn" id="divisorTab">Divisor</button>
-                <button class="calcTab btn" id="calcTab">Calculator</button>
+                <button class="calcTab btn" id="calcTab">Calculadora</button>
                 <div id="themeBtn">
                     <i class="fas fa-adjust"></i>
                 </div>
@@ -29,8 +29,8 @@
                 </div>
                 <ul class="guestList">
                     <li class="guestContainer header">
-                        <h3 class="guest">Pagaron</h3>
-                        <h3 class="amount">Monto</h3>
+                        <h3 class="guestTitle">Pagaron</h3>
+                        <h3 class="amountTitle">Monto</h3>
                     </li>
                     <li class="guestContainer">
                         <input type="text" class="guest" name="guest" placeholder="Nombre">
@@ -51,17 +51,25 @@
                         <div class="amountCont">
                             <label for="amount" class="amountLbl">$</label>
                             <input type="number" name="amount" class="amount" placeholder="0">
-                        </div>                    </li>
+                        </div>
+                    </li>
                 </ul>
                 <div class="more" id="more">
                     <i class="fas fa-plus"></i>
                 </div>
-                <button id="calculate" class="calculate btn">Calcular</button>
+                <div class="btnCont">
+                    <button id="calculate" class="calculate btn">Calcular</button>
+                    <button id="clearForm" class="calculate btn">Borrar</button>
+                </div>
             </div>
             <div class="result" id="result">
                 
             </div>
         </section>
+        <div class="guestListPop">
+            <div id="guestListCont">
+            </div>
+        </div>
         <section id="calculator" class="calculator">
             <div class="display">
                 <div id="supDisplay"></div>

@@ -3,6 +3,7 @@
 
 
 .light{
+    background-color: $color3;
     header{
         nav{
             background-color: $color1;
@@ -30,6 +31,14 @@
                     border: 1px $color1 solid;
                     background-color: $color1;
                 }
+            }
+        }
+    }
+    .guestListPop{
+        #guestListCont{
+            .guest{
+                background-color: $color3;
+                border: $color1 solid 1px;
             }
         }
     }

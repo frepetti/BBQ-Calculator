@@ -9,6 +9,7 @@
     align-items: center;
     align-content: stretch;
     font-family: 'Exo', sans-serif;
+    
     button{
         font-family: 'Exo', sans-serif;
         border: 0;
@@ -19,6 +20,7 @@
         border-bottom: 1px solid;
     }
     header{
+        
         width: 100%;
         nav{
             height: 7vh;
@@ -127,10 +129,10 @@
                         font-size: 1em;
                         margin: 2vh 0 2vh 0;
                     }
-                    .guest{
+                    .guestTitle{
 
                     }
-                    .amount{
+                    .amountTitle{
                         margin-left: 45px;
                     }
                 }
@@ -149,6 +151,14 @@
             .calculate{
                 margin: 5vh;
                 height: 45px;
+                width: 75px;
+                align-self: center;
+                padding: 1vh;
+            }
+            .clear{
+                margin: 5vh;
+                height: 45px;
+                width: 75px;
                 align-self: center;
                 padding: 1vh;
             }
@@ -169,14 +179,47 @@
         height: 93vh;
         max-height: 96vh;
     }
+    .guestListPop{
+        height: 100%;
+        width: 100vw;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        #guestListCont{
+            max-height: 40vh;
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding: 2px 0;
+            .guest{
+                text-align: center;
+                width: 100%;
+                height: 8vh;
+                line-height: 8vh;
+                font-size: 1em;
+                box-sizing: border-box;
+            }
+        }
+        #guestListCont::-webkit-scrollbar {
+            display: none;
+        }
+    }
     .calculator{
         transition: max-height 0.5s ease-out;
         height: 93vh;
         max-height: 0px;
-        max-width: 100vw;
+        max-width: 600px;
         overflow: hidden;
-        width: 100vw;
         box-sizing: border-box;
+
+
         .display{
             position: relative;
             box-sizing: border-box;
@@ -215,7 +258,7 @@
                     width: 100%;
                     box-sizing: border-box;
                     text-align: center;
-                    height: 13vh;
+                    height: 9vh;
                     line-height: 50px;
                 }
             }
